@@ -187,6 +187,13 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Open splits
+vim.keymap.set('n', '<leader>tt', ':sp<CR>', { desc = 'Split Horizontal' })
+vim.keymap.set('n', '<leader>tg', ':vs<CR>', { desc = 'Split Vertical' })
+
+-- Open netrw
+vim.keymap.set('n', '<leader>p', ':Ex<CR>', { desc = 'netrw' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -283,6 +290,7 @@ require('lazy').setup {
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+        ['<leader>t'] = { name = 'Splits', _ = 'which_key_ignore' },
       }
     end,
   },
